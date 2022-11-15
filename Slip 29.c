@@ -1,3 +1,4 @@
+/*Slip 29 B) Write a ‘C’ program to create Circular Singly Link list and display it.*/
 #include<stdio.h>
 #include<stdlib.h>
 #include<conio.h>
@@ -32,26 +33,13 @@ void main()
 	printf("Do you want to continue (0,1)?");
 	scanf("%d", &choice);
 	}
-    temp=head;
-	printf("\nData in the List\n");
-	while(temp!=0)
-	{
-		printf("%d\t", temp->data);
-		temp=temp->next;
-	}
-    ptr=head;
-    temp=head;
-    while(temp->next!=NULL)
-    {
-        temp=temp->next;
-    }
-    temp->next=ptr;
-    temp=head;
-	printf("\nData in the List\n");
-	while(temp!=0)
-	{
-		printf("%d\t", temp->data);
-		temp=temp->next;
+	temp=head;
+	printf("\nLinked list:\n");
+	if(head!=NULL){
+		while(temp->next!=temp){
+			printf("%d \t",temp->data);
+			temp=temp->next;
+		}
 	}
     getch();
 }
