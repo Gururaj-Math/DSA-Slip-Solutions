@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<body>
+<div ng-app="myApp" ng-controller="myCtrl" ng-init=games=["list"]>
+	<button ng-click="disarr()">Click Me</button>
+    <ul>
+       <li ng-repeat="game in games" ng-bind="game"></li>
+    </ul>
+</div>
+<script>
+	var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function($scope){
+    	$scope.disarr = function(){
+        	$scope.games = ["cricket","Tennis","football"];
+        }
+    });
+</script>
+</body>
+</html>
