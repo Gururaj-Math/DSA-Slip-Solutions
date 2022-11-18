@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+<body>
+<div ng-app="" ng-init="ug=['BBA(CA)','BCA(SCIENCE)','B.SC(COMPUTER SCIENCE)']; pg=['MSC(CS)','MSC(CA)','MCA']">
+	<h1>Under graduate courses</h1><br>
+	<ol type="i">
+		<li ng-repeat="x in ug">
+			{{x}}
+		</li>
+	</ol>
+	<h1>Post graduate courses</h1><br>
+	<ol type="i">
+		<li ng-repeat="y in pg">
+			{{y}}
+		</li>
+	</ol>
+
+</div>
+</body>
+</html>
