@@ -1,41 +1,37 @@
-#include<stdio.h>
-#include<conio.h>
-#include<stdlib.h>
-#include<string.h>
-#define max 10
-int top=-1;
-int i;
-int stack[max];
-void main(){
-    char item[max];
-    if(top==max-1)
+#include <stdio.h>
+#include <string.h>
+
+#define max 100
+int top, stack[max];
+
+void push(char x)
+{
+    if (top == max - 1)
     {
-        printf("\nStack Overflow");
+        printf("stack overflow");
     }
     else
     {
-        printf("\nEnter string to push in stack: ");
-        scanf("%s",&item);
-        top=top+1;
-        stack[top]=item;
+        stack[++top] = x;
     }
-    if(top==-1)
-    {
-        printf("\nStack is empty");
-    }
-    else
-    {
-        printf("\nStack elements:\n");
-        for(i=top;i>=0;--i)
-        {
-            printf("%s\n",stack[i]);
-        }
-    }
-    printf("\nReversed string:\n");
-    for(i=top;i>=0;--i)
-        {   
-            strrev(item);
-            printf("%s\n",stack[i]);
-        }
-    getch();
+}
+
+void pop()
+{
+    printf("%c", stack[top--]);
+}
+
+void main()
+{
+    char str[100];
+    printf("\nEnter String\n");
+    scanf("%s", str);
+    int len = strlen(str);
+    int i;
+
+    for (i = 0; i < len; i++)
+        push(str[i]);
+
+    for (i = 0; i < len; i++)
+        pop();
 }
