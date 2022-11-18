@@ -1,0 +1,31 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="student=[
+			{rno:1, name:'sanket', sgpa:'9.14'},
+			{rno:2, name:'Guru', sgpa:'9.29'},
+			{rno:3, name:'Tushar', sgpa:'5.14'},
+			{rno:4, name:'Tejas', sgpa:'6.14'},
+			{rno:5, name:'Akasg', sgpa:'7.14'},
+			{rno:6, name:'sayli', sgpa:'6.14'},
+			{rno:7, name:'cgaitali', sgpa:'8.14'},
+			{rno:8, name:'tejal', sgpa:'5.14'},
+			{rno:9, name:'bhausaheb', sgpa:'6.14'},
+			{rno:10, name:'sumit', sgpa:'9.14'}
+			]">
+<h1>Student Details</h1><br>
+<table border=3>
+<tr>
+	<th>Roll no</th>
+	<th>Name</th>
+	<th>SGPA</th>
+</tr>
+<tr ng-repeat="x in student">
+	<td>{{x.rno}}</td>
+	<td>{{x.name}}</td>
+	<td>{{x.sgpa}}</td>
+</tr>
+</table>
+</body>
+</html>
