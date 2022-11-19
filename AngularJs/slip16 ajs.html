@@ -1,0 +1,34 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="" ng-init="student=[
+		{name:'Gururaj', rollno:1, class:'A', addr:'pune'},
+		{name:'Sanket', rollno:2, class:'A', addr:'abcd'},
+		{name:'Tushar', rollno:3, class:'B', addr:'pune'},
+		{name:'Tejas', rollno:4, class:'A', addr:'pune'},
+		{name:'Abcd', rollno:5, class:'B', addr:'abcde'}		
+		]">
+<h1 align="center">Student details</h1>
+<table border=1 align="center">	
+<tr>	
+	<th>Name</th>
+	<th>Rollno</th>
+	<th>Class</th>
+	<th>Address</th>
+</tr>
+<tr ng-repeat="x in student">
+	<td>{{x.name}}</td>
+	<td>{{x.rollno}}</td>
+	<td>{{x.class}}</td>
+	<td>{{x.addr}}</td>
+</tr>
+</table>
+<h1 align="center">Student who live in pune</h1>
+<ol>
+	<li ng-repeat="x in student | filter : 'pune'">
+	{{x.name +"   "+ x.addr}}
+	</li>
+</ol>
+</body>
+</html>
