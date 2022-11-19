@@ -1,0 +1,41 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-app="">
+<hr>
+<h3 align="center">Information of a customer for booking a plan</h3>
+Enter name:<input type="text" ng-model="name"><br><br>
+Enter Address:<input type="text" ng-model="addr"><br><br>
+Enter Phone no:<input type="number" ng-model="phno"><br><br>
+Select Gender:<input type="radio" name="gender" value="Male" ng-model="gender">Male
+	      <input type="radio" name="gender" value="Female" ng-model="gender">Female<br><br>
+Enter Date of booking:<input type="date" ng-model="dob"><br><br>
+Enter Date of journey:<input type="date" ng-model="doj"><br><br>
+Enter no of passenger:<input type="number" ng-model="passno"><br><br>
+Enter name of passenger:<input type="text" ng-model="passname"><br><br>
+<hr>
+<table border=1 align="center">
+	<tr>
+		<th> Name </th>
+		<th> Address </th>
+		<th> Phone no </th>
+		<th> Gender </th>
+		<th> Date of booking </th>
+		<th> Date of journey </th>
+		<th> No of passenger </th>
+		<th> Name of passenger </th>
+	</tr>
+	<tr>
+		<td> {{name}} </td>
+		<td> {{addr}} </td>
+		<td> {{phno}} </td>
+		<td> {{gender}} </td>
+		<td> {{dob}} </td>
+		<td> {{doj}} </td>
+		<td> {{passno}} </td>
+		<td> {{passname}} </td>
+	</tr>
+</table>
+</body>
+</html>
