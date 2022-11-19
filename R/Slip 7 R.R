@@ -1,9 +1,7 @@
-frame=data.frame(
-  name=c("Gururaj","Sanket","tushar","akash","tejas"),
-  id=c(1,2,3,4,5),
-  desig=c("manager","ceo", "assistant", "assistant", "assistant")
+employee=data.frame(Name=c("Salma","Akash","Sanu","John","Sanket"),
+                    Gender=c("F","M","F","M","M"),
+                    Age=c(20,23,24,25,24),
+                    Designation=c("CEO","ASSISTANT","Executive","Clerk","Manager")
 )
-sort(frame[["name"]])
-sort(frame[["id"]])
-sort(frame[["desig"]])
-print(frame)
+print("Details of the  employees:")
+print(employee[with(employee,order(Name)),])
