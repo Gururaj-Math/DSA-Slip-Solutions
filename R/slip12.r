@@ -1,3 +1,5 @@
+#slip 12
+
 num = as.integer(readline(prompt = "Enter Number: "))
 for(i in 1:10)
 {
