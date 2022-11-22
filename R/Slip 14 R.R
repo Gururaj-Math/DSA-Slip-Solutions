@@ -1,0 +1,7 @@
+v1=c(1,3,5,7,9)
+v2=c(2,4,6,8,10)
+f1=factor(v1)
+f2=factor(v2)
+f3=unlist(list(f1,f2))
+print(f3)
+order(f3, decreasing='TRUE')
