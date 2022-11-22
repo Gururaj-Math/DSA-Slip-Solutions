@@ -1,0 +1,83 @@
+<!-- Using AngularJS Create a SPA that show Syllabus content of all subjects of SYBBA (CA)(use ng-view) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+  </head>
+  <body ng-app="">
+    <h1 align="center">SYBBA(CA) Syllabus </h1>
+    <p><input type="checkbox" ng-model="dm"> DM</p>
+
+    <div ng-show="dm">
+      <table>
+        <tr><th>Unit No.</th><th>Topics</th></tr>
+        <tr><td>1</td><td>E-Commerce</td></tr>
+        <tr><td>2</td><td>Introduction to New Age Media (Digital) Marketing</td></tr>
+        <tr><td>3</td><td>Creating Initial Digital Marketing Plan</td></tr>
+        <tr><td>4</td><td>Marketing using Web Sites</td></tr>
+        <tr><td>5</td><td>Search Engine Optimization</td></tr>
+        <tr><td>6</td><td>Customer Relationship Management</td></tr>
+        <tr><td>7</td><td>Social Media Marketing</td></tr>
+        <tr><td>8</td><td>Digital Marketing Budgeting</td></tr>
+      </table>
+    </div>
+
+    <p><input type="checkbox" ng-model="ds"> DS</p>
+
+    <div ng-show="ds">
+      <table>
+        <tr><th>Unit No.</th><th>Topics</th></tr>
+        <tr><td>1</td><td>Basic Concept and Introduction to Data Structure</td></tr>
+        <tr><td>2</td><td>Linear data structures</td></tr>
+        <tr><td>3</td><td>Linked List</td></tr>
+        <tr><td>4</td><td>Stacks</td></tr>
+        <tr><td>5</td><td>Queues</td></tr>
+        <tr><td>6</td><td>Trees</td></tr>
+        <tr><td>7</td><td>Graph</td></tr>
+      </table>
+    </div>
+
+    <p><input type="checkbox" ng-model="se"> SE</p>
+    <div ng-show="se">
+      <table>
+        <tr><th>Unit No.</th><th>Topics</th></tr>
+        <tr><td>1</td><td>Introduction to System Concepts </td></tr>
+        <tr><td>2</td><td>Introduction to Software Engineering</td></tr>
+        <tr><td>3</td><td>Software Development Life Cycle</td></tr>
+        <tr><td>4</td><td>Requirement Engineering</td></tr>
+        <tr><td>5</td><td>Analysis And Design Tools</td></tr>
+        <tr><td>6</td><td>Software Testing</td></tr>
+        <tr><td>7</td><td>Software Maintenance and Software Re-Engineering</td></tr>
+      </table>
+    </div>
+
+    <p><input type="checkbox" ng-model="ajs"> AJS</p>
+    <div ng-show="ajs">
+      <table>
+        <tr><th>Unit No.</th><th>Topics</th></tr>
+        <tr><td>1</td><td>AngularJS Core Concepts</td></tr>
+        <tr><td>2</td><td>AngularJS Directives and Expressions</td></tr>
+        <tr><td>3</td><td>AngularJS Modules, Controller, View and Scope</td></tr>
+        <tr><td>4</td><td>Filter, Forms and Ajax Filters</td></tr>
+        <tr><td>5</td><td>Dependency Injection, Services</td></tr>
+      </table>
+    </div>
+
+    <p><input type="checkbox" ng-model="bd"> BigD</p>
+    <div ng-show="bd">
+      <table>
+        <tr><th>Unit No.</th><th>Topics</th></tr>
+        <tr><td>1</td><td>Introduction to Big Data</td></tr>
+        <tr><td>2</td><td>Introduction to Data Sciences</td></tr>
+        <tr><td>3</td><td>Introduction to Machine Learning</td></tr>
+        <tr><td>4</td><td>Data Analysists with R / WEKA Machine Learning</td></tr>
+      </table>
+    </div>
+  </body>
+</html>
