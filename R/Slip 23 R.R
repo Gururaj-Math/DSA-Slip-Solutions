@@ -1,0 +1,5 @@
+a=c(3,7,5)
+b=c(9,7,2,3,6,1)
+arr=array(c(a,b), dim=c(3,3,2))
+print(arr)
+print(arr[2,,2])
