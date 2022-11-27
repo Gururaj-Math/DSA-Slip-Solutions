@@ -1,0 +1,5 @@
+listdata=c("Sanket","Tushar","Guru","Sumit")
+listdata=sort(listdata, decreasing = FALSE)
+print(listdata)
+listdata=sort(listdata, decreasing = TRUE)
+print(listdata)
