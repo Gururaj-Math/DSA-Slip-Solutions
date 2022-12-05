@@ -1,0 +1,5 @@
+a=c(2,5,1)
+b=c(8,3,9,4,1,7)
+arr1=array(c(a,b), dim=c(3,3,1))
+arr2=array(c(a,b), dim=c(3,3,1))
+print(arr1*arr2)
