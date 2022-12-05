@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <style>
+      h1{
+        text-align: center;
+        background: skyblue;
+        padding: 10px;
+        color: #fff;
+      }
+
+      p{
+        text-align: center;
+        border: 1px solid skyblue;
+        width: 500px;
+        margin: 0 auto;
+        border-radius: 50px;
+        padding: 10px;
+        background: skyblue;
+        color: #fff;
+        font-weight: 900;
+        font-size: 20px;
+        margin-bottom: 40px;
+      }
+
+      input[type="text"]{
+        border-radius: 20px;
+        border: none;
+        outline: none;
+        padding: 8px;
+      }
+      table{
+        margin: 0 auto;
+        width: 600px;
+        text-align: center;
+        padding: 10px;
+        border: 2px solid #000;
+        border-radius: 20px;
+      }
+
+      table td{
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <h1>ELearning System</h1>
+    <p> Search Student : <input type="text" ng-model="text">
+      <table border=2>
+        <h2 align="center">Student Details</h2>
+        <tr>
+          <td>Name Of Student</td>
+          <td>Course Name</td>
+          <td>Course Price</td>
+        </tr>
+        <tr ng-repeat="student in students | filter:text">
+          <td>{{student.name}}</td>
+          <td>{{student.course}}</td>
+          <td>{{student.price}}</td>
+        </tr>
+      </table>
+      <script>
+    var app = angular.module("myApp",[]);
+    app.controller("myCtrl",function($scope){
+    	$scope.students=[
+        {name:"guru", course:"Python", price:"1200Rs"},
+        {name:"sanket", course:"C", price:"3200Rs"},
+        {name:"tushar", course:"Python", price:"1200Rs"},
+        {name:"bhau", course:"C", price:"1500Rs"},
+        {name:"akash",course:"C#", price:"2200Rs"},
+        {name:"aaa", course:"JS", price:"1200Rs"},
+        {name:"bbbb", course:"JS", price:"1200Rs"},
+        {name:"cccc", course:"Python", price:"1200Rs"},
+        {name:"dddd",course:"Python", price:"1200Rs"},
+        {name:"eeee",course:"Python", price:"1200Rs"},
+        {name:"ffff", course:"Python", price:"1200Rs"},
+        {name:"gggg", course:"Python", price:"1200Rs"},
+        {name:"hhhh", course:"Python", price:"1200Rs"},
+        {name:"iiii",course:"Python", price:"1200Rs"},
+        {name:"jjjj",course:"Python", price:"1200Rs"},
+        {name:"kkkk", course:"Python", price:"1200Rs"},
+        {name:"llll", course:"Python", price:"1200Rs"},
+        {name:"mmmm", course:"Python", price:"1200Rs"},
+        {name:"nnnn",course:"Python", price:"1200Rs"},
+        {name:"oooo",course:"Python", price:"1200Rs"},
+        {name:"zzzz",course:"Python", price:"1200Rs"}
+        ];
+    });
+    </script>
+    </body>
+  </html>
