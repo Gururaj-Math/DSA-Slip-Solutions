@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hacker News Website</title>
+    <script
+      src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+      <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+          background: #000;
+          color: #fff;
+        }
+
+        .nav_container{
+          display: flex;
+          justify-content: space-between;
+          padding: 20px;
+        }
+
+        .nav_container .logo h3{
+          color: #fff;
+          font-size: 30px;
+        }
+
+        .nav_container .menu_items ul{
+          display: flex;
+          gap: 40px;
+        }
+
+        .nav_container .menu_items ul li{
+          list-style: none;
+        }
+
+        .nav_container .menu_items ul li a{
+          text-decoration: none;
+          color: #fff;
+          font-size: 20px;
+        }
+
+        .home_content .title h3{
+          text-align: center;
+          margin-top: 50px;
+          font-size: 50px;
+          color: red;
+          margin-bottom: 30px;
+        }
+
+        .news p{
+          font-size: 25px;
+          margin-top: 10px;
+          border: 2px solid #fff;
+          margin: 0 20px;
+          padding: 10px;
+          margin-bottom: 20px;
+        }
+      </style>
+  </head>
+  <body ng-app="myApp" ng-controller="myCtrl">
+    <nav>
+      <div class="nav_container">
+        <div class="logo">
+          <h3>HackerNews</h3>
+        </div>
+        <div class="menu_items">
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">CONTACT</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="home_content">
+      <div class="title">
+        <h3>HackNews</h3>
+      </div>
+      <div class="content">
+        <div class="news">
+          <p ng-repeat="n in news">{{n}} <br> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur dignissimos quos totam repellat, dolores quaerat cumque eligendi iste explicabo nemo unde ut culpa recusandae ad adipisci eveniet minima expedita cupiditate quas quo! Magnam fugit autem alias laboriosam odio quia hic totam unde possimus temporibus iusto non quos praesentium, voluptatum ducimus. </p>
+        </div>
+      </div>
+    </div>
+    <script>
+      var app = angular.module("myApp",[]);
+      app.controller("myCtrl",function($scope){
+        $scope.news = ["News1","News2","News3","News4","News5","News6"];
+      });
+    </script>
+  </body>
+</html>
