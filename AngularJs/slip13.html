@@ -1,0 +1,52 @@
+<!-- Using AngularJS create a SPA that accept the details of student and display 
+mark sheet ( roll_ no, student_ name, class, sub1, sub2, sub3, total, 
+percentage, grade) -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slip 13</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    </head>
+    <body>
+        <div ng-app="">
+            <h1>Students Details</h1>
+            <p>rollno<input type="number" ng-model="rno"></p>
+            <p>Student Name<input type="text" ng-model="sname"></p>
+            <p>Class<input type="text" ng-model="class"></p>
+            <p>Sub1<input type="number" ng-model="s1"></p>
+            <p>Sub2<input type="number" ng-model="s2"></p>
+            <p>sub3<input type="number" ng-model="s3"></p>
+            <p>Total:{{s1+s2+s3}}</p>
+            <p>Percentage:{{(s1+s2+s3)/300*100}}</p>
+            <table border="2">
+                <tr>
+                    <th>Rollno</th>
+                    <th>Student Name</th>
+                    <th>Class</th>
+                    <th>Sub1</th>
+                    <th>Sub2</th>
+                    <th>Sub3</th>
+                    <th>Total</th>
+                    <th>Percentage</th>
+                    <th>Grade</th>
+                </tr>
+                <tr>
+                    <td>{{rno}}</td>
+                    <td>{{sname}}</td>
+                    <td>{{class}}</td>
+                    <td>{{s1}}</td>
+                    <td>{{s2}}</td>
+                    <td>{{s3}}</td>
+                    <td>{{s1+s2+s3}}</td>
+                    <td>{{(s1+s2+s3)/300*100}}</td>
+                    <td ng-if="((s1+s2+s3)/300*100) == 35">Fail</td>
+                    <td ng-if="((s1+s2+s3)/300*100) == 50">C Grade</td>
+                    <td ng-if="((s1+s2+s3)/300*100) == 60">B Grade</td>
+                    <td ng-if="((s1+s2+s3)/300*100) == 80">A Grade</td>
+                    <td ng-if="((s1+s2+s3)/300*100) == 100">O Grade</td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
