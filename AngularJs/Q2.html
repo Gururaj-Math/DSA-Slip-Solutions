@@ -1,0 +1,101 @@
+<!-- Q2.
+Using AngularJS create a SPA that accept the details of student and display mark sheet 
+( roll_ no, student_ name, class, sub1, sub2, sub3, total, percentage, grade)	 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slip 13</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+        <p>Enter Name : <br> <input type="text" ng-model="sName"></p>
+        <p>Roll No : <br> <input type="number" ng-model="rNo"></p>
+        <p>Class : <br> <input type="text" ng-model="sClass"></p>
+        <p>sub 1 Marks : <br> <input type="number" ng-model="s1"></p>
+        <p>Sub 2 Marks : <br> <input type="number" ng-model="s2"></p>
+        <p>SUb 3 Marks : <br> <input type="number" ng-model="s3"></p>
+        <button ng-click="viewResult()">Show Result</button>
+        <table border="2px solid #000">
+            <h2>Student Mark Sheet</h2>
+            <tr>
+                <td>Student Name</td>
+                <td>Roll No</td>
+                <td>Class</td>
+                <td>Subject 1</td>
+                <td>Subject 2</td>
+                <td>Subject 3</td>
+                <td>Total</td>
+                <td>Percentage</td>
+                <td>Grade</td>
+            </tr>
+            <tr>
+                <td ng-repeat="n in name">{{n}}</td>
+                <td ng-repeat="r in rollNo">{{r}}</td>
+                <td ng-repeat="c in class">{{c}}</td>
+                <td ng-repeat="sb1 in sub1">{{sb1}}</td>
+                <td ng-repeat="sb2 in sub2">{{sb2}}</td>
+                <td ng-repeat="sb3 in sub3">{{sb3}}</td>
+                <td ng-repeat="t in total">{{t}}</td>
+                <td ng-repeat="p in percentage">{{p}}</td>
+                <td ng-repeat="g in grades">{{g}}</td>
+            </tr>
+        </table>
+    </div>
+    <script>
+        var app = angular.module("myApp", []);
+        app.controller("myCtrl", function($scope) {
+            $scope.viewResult = function() {
+                $scope.name = [];
+                $scope.name.push($scope.sName);
+
+                $scope.rollNo = [];
+                $scope.rollNo.push($scope.rNo);
+
+                $scope.class = [];
+                $scope.class.push($scope.sClass);
+
+                $scope.sub1 = [];
+                $scope.sub1.push($scope.s1);
+
+                $scope.sub2 = [];
+                $scope.sub2.push($scope.s2);
+
+                $scope.sub3 = [];
+                $scope.sub3.push($scope.s3);
+
+                $scope.total = [];
+                $scope.tot = $scope.s1 + $scope.s2 + $scope.s3;
+                $scope.total.push($scope.tot);
+
+                $scope.percentage = [];
+                $scope.per = ($scope.s1 + $scope.s2 + $scope.s3) / 3;
+                $scope.percentage.push($scope.per);
+
+                $scope.grades = [];
+                if ($scope.percentage >= 50 && $scope.percentage <= 59) {
+                    $scope.grades.push('B Grade');
+                } else if ($scope.percentage >= 60 && $scope.percentage <= 69) {
+                    $scope.grades.push('A Grade');
+                } else if ($scope.percentage >= 70 && $scope.percentage <= 89) {
+                    $scope.grades.push('A+ Grade');
+                } else if ($scope.percentage >= 90) {
+                    $scope.grades.push("O Grade");
+                } else {
+                    $scope.grades.push('Fail');
+                }
+
+
+            }
+        });
+    </script>
+</body>
+
+</html>
